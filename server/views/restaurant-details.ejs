@@ -14,11 +14,11 @@
     <header></header>
     <nav></nav>
         <div class="restaurant-details">
-            <img class="restaurant-details-img" src="<%= photo %>">
+            <img class="restaurant-details-img" src="<%= restaurant.image.startsWith('http') ? restaurant.image : '/' + restaurant.image %>">
             <div>
-                <h1><%= name %></h1>
-                <h2><%= address %></h2>
-                <h2><%= phone %></h2>
+                <h1><%= restaurant.name %></h1>
+                <h2><%= restaurant.address %></h2>
+                <h2><%= restaurant.phone %></h2>
             </div>
         </div>
 
